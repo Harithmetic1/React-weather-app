@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #101014;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+.white{
+    color: white;
+}
+nav{
+    max-width: 100%;
+    height: auto;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    background-color: #101014;
+    box-shadow: 0 8px 6px -6px rgb(61, 61, 61);
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-input{
+    margin: auto;
+    margin-top: 20px;
+}
+.user-input .search{
+    background-color: #1F1F21;
+    border-radius: 25px;
+}
+.user-input .search input{
+    background: transparent;
+    border: none;
+    padding: 15px;
+    color: #8C8C8D;
+    outline: none;
+}
+.user-input .search .submit-btn{
+    background-color: transparent;
+    color: #8C8C8D;
+    border: none;
+    outline: none;
+    padding-right: 10px;
+}
+.weather-results{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    background-image: url("img/world_map.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* filter: blur(3px); */
+    /* -webkit-filter: blur(8px); */
+}
+.weather-results .results{
+    width: 140px;
+    height: auto;
+    border-radius: 15px;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    background-color: #8C8C8D;
+    padding-bottom: 10px;
+    filter: blur(0px);
+}
+.weather-icon img{
+    width: 70px;
+    height: auto;
+}
+.temp-details{
+    display: inline-flex;
+}
+.temp-num{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px;
+}
+.temp-name{
+    font-size: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.other-results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    margin: auto;
+    width: 290px;
+    height: auto;
+    background-color: #8C8C8D;
+    border-radius: 15px;
+    position: relative;
+}
+.container .weather-icon{
+    position: absolute;
+    top: -30px;
+    left: 39%;
+}
+.other-results .container .results{
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+}
+.other-results .container .results .max, .wind, .humidity, .pressure{
+    padding: 30px;
+}
+
+/*CSS for view.html*/
+#view-nav{
+    text-align: left;
+}
+#view-nav h3, p{
+    margin: 5px;
+}
+.view-temp-details{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("img/world_map.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.view-temp-details .view-container{
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.view-temp-details .view-container .weather-icon img{
+    width: 180px;
+    height: auto;
+}
+.view-temp-details .view-container .temp-details{
+    display: flex;
+    flex-direction: column;
+}
+.view-temp-details .view-container .temp-details .temp-desc{
+    color: white;
+}
+.view-temp-details .view-container .temp-details .temp-num{
+    font-size: 45px;
+    color: white;
+}
+.hourly-updates{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.hourly-updates .view-containers{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.hourly-updates .view-containers .updates{
+    padding: 25px;
+    border: 1px #8C8C8D;
+    transition: all .2s ease-in-out;
+}
+.hourly-updates .view-containers .updates:hover{
+    transform: scale(1.2);
+}
